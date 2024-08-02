@@ -147,21 +147,21 @@ publishing {
 }
 
 
-subprojects {
-    task sourcesJar(type: Jar, dependsOn: classes) {
-        archiveClassifier.set('sources')
-        from sourceSets.main.allSource
-    }
-
-    tasks.withType(Test) {
-        testLogging {
-            events "skipped", "failed"
-            showStandardStreams = true
-            exceptionFormat = 'full'
-        }
-    }
-
-    artifacts {
-        archives sourcesJar
-    }
-}
+//subprojects {
+//    task sourcesJar(type: Jar, dependsOn: classes) {
+//        archiveClassifier.set('sources')
+//        from sourceSets.main.allSource
+//    }
+//
+//    tasks.withType(Test) {
+//        testLogging {
+//            events "skipped", "failed"
+//            showStandardStreams = true
+//            exceptionFormat = 'full'
+//        }
+//    }
+//
+//    artifacts {
+//        archives sourcesJar
+//    }
+//}
